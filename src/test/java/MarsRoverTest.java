@@ -29,4 +29,11 @@ class MarsRoverTest {
         rover.execute("R");
         assertEquals("(0, 0) E", rover.report());
     }
+
+    @Test
+    void test_multipleCommands() {
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
+        rover.execute("MRMLMLLB");
+        assertEquals("(1, 3) S", rover.report());
+    }
 }
