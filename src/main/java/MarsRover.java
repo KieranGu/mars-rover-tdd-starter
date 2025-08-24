@@ -9,14 +9,22 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void execute(String command) {
-        if (command.equals("M")) {
+    public void execute(String commandList) {
+        for (char command : commandList.toCharArray())
+            executeCommand(command);
+    }
+
+    private void executeCommand(char command) {
+        if (command=='M') {
             moveForward();
-        }else if (command.equals("B")) {
+        }
+        else if (command=='B') {
             moveBackward();
-        }else if (command.equals("L")) {
+        }
+        else if (command=='L') {
             turnLeft();
-        }else if (command.equals("R")) {
+        }
+        else if (command=='R') {
             turnRight();
         }
     }
