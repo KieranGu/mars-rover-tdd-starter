@@ -26,6 +26,8 @@ public class MarsRover {
         }
         else if (command=='R') {
             turnRight();
+        }else {
+            throw new IllegalArgumentException("Wrong command");
         }
     }
 

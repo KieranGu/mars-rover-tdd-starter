@@ -41,7 +41,6 @@ class MarsRoverTest {
     @Test
     void test_wrong_command() {
         MarsRover rover = new MarsRover(0, 0, Direction.N);
-        rover.execute("X");
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> rover.execute("X"));
         assertEquals("Wrong command", exception.getMessage());
