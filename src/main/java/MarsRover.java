@@ -12,6 +12,20 @@ public class MarsRover {
     public void execute(String command) {
         if (command.equals("M")) {
             moveForward();
+        }else if (command.equals("B")) {
+            moveBackward();
+        }
+    }
+
+    private void moveBackward() {
+        if (direction.equals(Direction.N)) {
+            y--;
+        } else if (direction.equals(Direction.E)) {
+            x--;
+        } else if (direction.equals(Direction.S)) {
+            y++;
+        } else if (direction.equals(Direction.W)) {
+            x++;
         }
     }
 
