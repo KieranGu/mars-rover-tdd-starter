@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MarsRoverTest {
     @Test
-    void test_moveForward() {
+    void test_move_Forward() {
         // Given
         MarsRover rover = new MarsRover(0, 0, Direction.N);
         // When
@@ -13,7 +13,7 @@ class MarsRoverTest {
         assertEquals("(0, 1) N", rover.report());
     }
     @Test
-    void test_moveBackward() {
+    void test_move_Backward() {
         // Given
         MarsRover rover = new MarsRover(1, 1, Direction.N);
         // When
@@ -23,7 +23,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void test_turnLeft() {
+    void test_turn_Left() {
         // Given
         MarsRover rover = new MarsRover(0, 0, Direction.N);
         // When
@@ -33,7 +33,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void test_turnRight() {
+    void test_turn_Right() {
         // Given
         MarsRover rover = new MarsRover(0, 0, Direction.N);
         // When
@@ -43,7 +43,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void test_multipleCommands() {
+    void test_multiple_Commands() {
         // Given
         MarsRover rover = new MarsRover(0, 0, Direction.N);
         // When
