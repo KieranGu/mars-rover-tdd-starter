@@ -14,6 +14,8 @@ public class MarsRover {
             moveForward();
         }else if (command.equals("B")) {
             moveBackward();
+        }else if (command.equals("L")) {
+            turnLeft();
         }
     }
 
@@ -40,6 +42,19 @@ public class MarsRover {
             x--;
         }
     }
+    private void turnLeft()
+    {
+        if(direction.equals(Direction.N)) {
+            direction = Direction.W;
+        } else if(direction.equals(Direction.E)) {
+            direction = Direction.N;
+        } else if(direction.equals(Direction.S)) {
+            direction = Direction.E;
+        } else if(direction.equals(Direction.W)) {
+            direction = Direction.S;
+        }
+    }
+
 
     public String report() {
         return "(" + x + ", " + y + ") " + direction.toString();
