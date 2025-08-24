@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MarsRoverTest {
     @Test
@@ -35,5 +36,14 @@ class MarsRoverTest {
         MarsRover rover = new MarsRover(0, 0, Direction.N);
         rover.execute("MRMLMLLB");
         assertEquals("(1, 3) S", rover.report());
+    }
+
+    @Test
+    void test_wrong_command() {
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
+        rover.execute("X");
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> rover.execute("X"));
+        assertEquals("Wrong command", exception.getMessage());
     }
 }
