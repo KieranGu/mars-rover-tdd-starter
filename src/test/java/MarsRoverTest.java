@@ -15,4 +15,11 @@ class MarsRoverTest {
         rover.execute("B");
         assertEquals("(1, 0) N", rover.report());
     }
+
+    @Test
+    void test_turnLeft() {
+        MarsRover rover = new MarsRover(0, 0, Direction.N);
+        rover.execute("L");
+        assertEquals("(0, 0) W", rover.report());
+    }
 }
